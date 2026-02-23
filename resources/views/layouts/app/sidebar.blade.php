@@ -15,8 +15,17 @@
                     <flux:sidebar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
-                    <flux:sidebar.item icon="squares-2x2" :href="route('categories')" :current="request()->routeIs('categories')" wire:navigate>
+                    <flux:sidebar.item icon="squares-2x2" :href="route('categories.index')" :current="request()->routeIs('categories.index')" wire:navigate>
                         {{ __('Categories') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="credit-card" :href="route('budgets.index')" :current="request()->routeIs('budgets.index')" wire:navigate>
+                        {{ __('Budget') }}
+                    </flux:sidebar.item>
+                 <flux:sidebar.item icon="banknotes" :href="route('expenses.index')" :current="request()->routeIs('expenses.index')" wire:navigate>
+                        {{ __('Expenses') }}
+                    </flux:sidebar.item>
+                  <flux:sidebar.item icon="arrow-path" :href="route('recurring-expenses.index')" :current="request()->routeIs('recurring-expenses.index')" wire:navigate>
+                        {{ __('Recurring Expenses') }}
                     </flux:sidebar.item>
                 </flux:sidebar.group>
             </flux:sidebar.nav>
